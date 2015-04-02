@@ -52,21 +52,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'coffeed.urls'
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
+
 
 WSGI_APPLICATION = 'coffeed.wsgi.application'
 
@@ -104,3 +90,9 @@ STATIC_URL = '/static/'
 TEMPLATE_DIRS = (
  os.path.join(BASE_DIR, 'templates'),
  )
+
+STATICFILES_DIRS = (
+os.path.join(BASE_DIR, 'static'),
+)
+
+STATIC_ROOT = 'staticfiles'
